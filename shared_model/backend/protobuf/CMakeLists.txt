@@ -34,6 +34,7 @@ add_library(shared_model_proto_backend
     queries/impl/proto_get_account.cpp
     queries/impl/proto_get_account_asset_transactions.cpp
     queries/impl/proto_get_account_assets.cpp
+    queries/impl/proto_get_setting_value.cpp
     queries/impl/proto_get_account_detail.cpp
     queries/impl/proto_get_account_transactions.cpp
     queries/impl/proto_get_asset_info.cpp

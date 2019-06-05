@@ -77,6 +77,8 @@ namespace shared_model {
       using TransactionsNumberType = uint16_t;
       /// Type of the transfer message
       using DescriptionType = std::string;
+      /// Type of setting key
+      using SettingKey = std::string;
 
       enum class BatchType { ATOMIC = 0, ORDERED = 1 };
 
