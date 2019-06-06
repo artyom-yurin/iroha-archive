@@ -21,7 +21,7 @@ namespace shared_model {
       /**
        * @return key containing requested value
        */
-      virtual const types::SettingKey &key() const = 0;
+      virtual const types::SettingKeyType &key() const = 0;
 
       std::string toString() const override;
 

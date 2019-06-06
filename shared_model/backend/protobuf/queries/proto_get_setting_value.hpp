@@ -24,7 +24,7 @@ namespace shared_model {
 
       GetSettingValue(GetSettingValue &&o) noexcept;
 
-      const interface::types::SettingKey &key() const override;
+      const interface::types::SettingKeyType &key() const override;
 
      private:
       // ------------------------------| fields |-------------------------------

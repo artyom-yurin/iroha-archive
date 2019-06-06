@@ -26,7 +26,7 @@ namespace shared_model {
     GetSettingValue::GetSettingValue(GetSettingValue &&o) noexcept
         : GetSettingValue(std::move(o.proto_)) {}
 
-    const interface::types::SettingKey &GetSettingValue::key() const {
+    const interface::types::SettingKeyType &GetSettingValue::key() const {
       return setting_value_.key();
     }
 
