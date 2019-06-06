@@ -16,6 +16,7 @@
 #include "interfaces/query_responses/signatories_response.hpp"
 #include "interfaces/query_responses/transactions_page_response.hpp"
 #include "interfaces/query_responses/transactions_response.hpp"
+#include "interfaces/query_responses/setting_value_response.hpp"
 #include "utils/visitor_apply_for_all.hpp"
 
 using Variant =

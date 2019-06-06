@@ -25,6 +25,7 @@ namespace shared_model {
     class RolesResponse;
     class RolePermissionsResponse;
     class TransactionsPageResponse;
+    class SettingValueResponse;
     /**
      * Class QueryResponse(qr) provides container with concrete query responses
      * available in the system.
@@ -48,7 +49,8 @@ namespace shared_model {
                                          RolesResponse,
                                          RolePermissionsResponse,
                                          TransactionsPageResponse,
-                                         BlockResponse>;
+                                         BlockResponse,
+                                         SettingValueResponse>;
 
       /**
        * @return reference to const variant with concrete qr

@@ -79,6 +79,8 @@ namespace shared_model {
       using DescriptionType = std::string;
       /// Type of setting key
       using SettingKeyType = std::string;
+      /// Type of setting value
+      using SettingValueType = std::string;
 
       enum class BatchType { ATOMIC = 0, ORDERED = 1 };
 

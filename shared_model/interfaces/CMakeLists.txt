@@ -66,6 +66,7 @@ if (IROHA_ROOT_PROJECT)
       iroha_internal/transaction_batch_impl.cpp
       iroha_internal/transaction_batch_parser_impl.cpp
       iroha_internal/block.cpp
+      query_responses/impl/setting_value_response.cpp
       )
 
   add_library(shared_model_interfaces_factories
