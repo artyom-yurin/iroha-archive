@@ -1101,6 +1101,16 @@ namespace iroha {
           std::move(response_txs), query_hash_);
     }
 
+    QueryExecutorResult PostgresQueryExecutorVisitor::operator()(
+        const shared_model::interface::GetSettingValue &q) {
+      //TODO artyom-yurin 06.06.2019 Create a query GetSettingValue response
+      return query_response_factory_->createErrorQueryResponse(
+        shared_model::interface::QueryResponseFactory::ErrorQueryType::kNotSupported,
+        "No settings yet",
+        0
+        ,query_hash_);
+    }
+
     template <typename ReturnValueType>
     bool PostgresQueryExecutorVisitor::existsInDb(
         const std::string &table_name,
