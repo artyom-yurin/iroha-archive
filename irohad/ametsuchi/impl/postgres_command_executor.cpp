@@ -26,6 +26,7 @@
 #include "interfaces/commands/set_quorum.hpp"
 #include "interfaces/commands/subtract_asset_quantity.hpp"
 #include "interfaces/commands/transfer_asset.hpp"
+#include "interfaces/commands/set_setting_value.hpp"
 #include "interfaces/common_objects/types.hpp"
 #include "interfaces/permission_to_string.hpp"
 #include "utils/string_builder.hpp"
@@ -1201,6 +1202,23 @@ namespace iroha {
       return executeQuery(
           sql_, cmd.str(), "TransferAsset", std::move(str_args));
     }
+
+
+    CommandResult PostgresCommandExecutor::operator()(
+        const shared_model::interface::SetSettingValue &command) {
+      auto &key = command.key();
+      auto &value = command.value();
+      if (creator_account_id_.empty()) {
+        // When creator is not known, it is genesis block
+        creator_account_id_ = "genesis";
+      }
+
+      return logAndReturnErrorResponse(
+          shared_model::interface::QueryResponseFactory::ErrorQueryType::kNotSupported,
+          "No settings yet",
+          0
+      );
+    };
 
     void PostgresCommandExecutor::prepareStatements(soci::session &sql) {
       std::vector<PreparedStatement> statements;

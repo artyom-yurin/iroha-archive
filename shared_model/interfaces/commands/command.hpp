@@ -28,6 +28,7 @@ namespace shared_model {
     class SetQuorum;
     class SubtractAssetQuantity;
     class TransferAsset;
+    class SetSettingValue;
 
     /**
      * Class provides commands container for all commands in system.
@@ -56,7 +57,8 @@ namespace shared_model {
                                       SetAccountDetail,
                                       SetQuorum,
                                       SubtractAssetQuantity,
-                                      TransferAsset>;
+                                      TransferAsset,
+                                      SetSettingValue>;
 
       /**
        * @return reference to const variant with concrete command
